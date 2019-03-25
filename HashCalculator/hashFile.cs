@@ -8,12 +8,12 @@ using System.IO;
 
 namespace HashCalculator
 {
-    class hashFile
+    class HashFile
     {
         private SHA256 sha256;
 
 
-        private byte[] HashYourFileWithSha256(string file)
+        public byte[] HashYourFileWithSha256(string file)
         {
             sha256 = SHA256.Create();
             using (FileStream stream = File.OpenRead(file)) { 
@@ -33,6 +33,8 @@ namespace HashCalculator
 
             return result;
         }
+
+
 
     }
 }

@@ -43,5 +43,22 @@ namespace HashCalculator
                 hashFile2.Clear();
             }
         }
+
+        private void calcButton_Click(object sender, EventArgs e)
+        {
+            if(pathFile1.Text != "" && pathFile2.Text != "")
+            {
+                HashFile hashFile = new HashFile();
+                byte[] myHashedFile1 = hashFile.HashYourFileWithSha256(pathFile1.Text);
+                string myHashedFile1String = HashFile.ConvertSha256BytesToString(myHashedFile1);
+
+
+                byte[] myHashedFile2 = hashFile.HashYourFileWithSha256(pathFile2.Text);
+                string myHashedFile2String = HashFile.ConvertSha256BytesToString(myHashedFile2);
+
+                hashFile1.Text = myHashedFile1String;
+                hashFile2.Text = myHashedFile2String;
+            }
+        }
     }
 }
