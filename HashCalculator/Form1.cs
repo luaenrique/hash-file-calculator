@@ -58,6 +58,21 @@ namespace HashCalculator
 
                 hashFile1.Text = myHashedFile1String;
                 hashFile2.Text = myHashedFile2String;
+
+                if(myHashedFile1String == myHashedFile2String)
+                {
+                    resultLabel.ForeColor = Color.Green;
+                    resultLabel.Text = "Files match!";
+                }
+                else
+                {
+                    resultLabel.ForeColor = Color.Red;
+                    resultLabel.Text = "Files do not match!";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please, select two files to calculate the hash between them.");
             }
         }
     }

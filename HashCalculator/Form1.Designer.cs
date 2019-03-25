@@ -40,12 +40,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.calcButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.resultLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pathFile1
             // 
             this.pathFile1.Location = new System.Drawing.Point(30, 63);
             this.pathFile1.Name = "pathFile1";
+            this.pathFile1.ReadOnly = true;
             this.pathFile1.Size = new System.Drawing.Size(319, 20);
             this.pathFile1.TabIndex = 0;
             this.pathFile1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -65,6 +68,7 @@
             this.hashFile1.Location = new System.Drawing.Point(30, 122);
             this.hashFile1.Multiline = true;
             this.hashFile1.Name = "hashFile1";
+            this.hashFile1.ReadOnly = true;
             this.hashFile1.Size = new System.Drawing.Size(366, 76);
             this.hashFile1.TabIndex = 2;
             // 
@@ -73,6 +77,7 @@
             this.hashFile2.Location = new System.Drawing.Point(411, 122);
             this.hashFile2.Multiline = true;
             this.hashFile2.Name = "hashFile2";
+            this.hashFile2.ReadOnly = true;
             this.hashFile2.Size = new System.Drawing.Size(366, 76);
             this.hashFile2.TabIndex = 5;
             // 
@@ -90,6 +95,7 @@
             // 
             this.pathFile2.Location = new System.Drawing.Point(411, 63);
             this.pathFile2.Name = "pathFile2";
+            this.pathFile2.ReadOnly = true;
             this.pathFile2.Size = new System.Drawing.Size(319, 20);
             this.pathFile2.TabIndex = 3;
             // 
@@ -143,11 +149,31 @@
             this.calcButton.UseVisualStyleBackColor = true;
             this.calcButton.Click += new System.EventHandler(this.calcButton_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(30, 261);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Result: ";
+            // 
+            // resultLabel
+            // 
+            this.resultLabel.AutoSize = true;
+            this.resultLabel.Location = new System.Drawing.Point(79, 261);
+            this.resultLabel.Name = "resultLabel";
+            this.resultLabel.Size = new System.Drawing.Size(35, 13);
+            this.resultLabel.TabIndex = 12;
+            this.resultLabel.Text = "label6";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 338);
+            this.Controls.Add(this.resultLabel);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.calcButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -180,6 +206,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button calcButton;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label resultLabel;
     }
 }
 
