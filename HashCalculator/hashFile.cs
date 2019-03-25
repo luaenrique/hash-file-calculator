@@ -22,5 +22,17 @@ namespace HashCalculator
         }
 
 
+        public static string ConvertSha256BytesToString(byte[] hashedFile)
+        {
+            string result = "";
+
+            foreach (byte b in hashedFile)
+            {
+                result += b.ToString("x2");
+            }
+
+            return result;
+        }
+
     }
 }
