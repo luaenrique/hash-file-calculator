@@ -6,7 +6,7 @@ In the field of Information Security there is a term called "Integrity". Integri
 
 ## How it works?
 
-A hash is basically a one-way function (it means that it is not reversible as cryptographic) that generates a fixed-length string based on input, in this case our input are files. A hash will always generate the same string for a same input data, that means that two different files would give us different hashes, in other words, a file should give us a specific hash and that hash can be compared to another one, if those hashes differ we got different files and a corrupted file.
+A hash is basically a one-way function (it means that it is not reversible as cryptographic) that generates a fixed-length string based on input, in this case our input are files. A hash will always generate the same string for a same input data, that means that two different files would give us different hashes, in other words, a file should give us a specific hash and that hash can be compared to another one, if those hashes differ we got different files and one is corrupted.
 
 ## Example
 
